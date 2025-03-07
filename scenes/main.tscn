@@ -1,0 +1,454 @@
+[gd_scene load_steps=35 format=3 uid="uid://uhirk4j0bkkb"]
+
+[ext_resource type="Texture2D" uid="uid://g2kwa7mhnktq" path="res://resources/images/logo_white.png" id="1_07ek5"]
+[ext_resource type="FontFile" uid="uid://iund57xk6mri" path="res://resources/fonts/Inter/static/Inter_18pt-Regular.ttf" id="1_c8co6"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_emm26"]
+[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://resources/fonts/Inter/static/Inter_18pt-Black.ttf" id="2_gohky"]
+[ext_resource type="FontFile" uid="uid://dhnotjof8qyi" path="res://resources/fonts/Inter/static/Inter_18pt-SemiBold.ttf" id="3_vvqq3"]
+[ext_resource type="Texture2D" uid="uid://b2n5p5ufxtk7g" path="res://resources/images/add_circle_2.png" id="4_eu6tk"]
+[ext_resource type="Texture2D" uid="uid://dt31c48jxd7ft" path="res://resources/images/Arrow_down_2.png" id="5_21em6"]
+[ext_resource type="PackedScene" uid="uid://qd5tpgl2irrl" path="res://scenes/calculator.tscn" id="6_t16vj"]
+[ext_resource type="Theme" uid="uid://dxg4j6hfoj3dt" path="res://resources/themes/Panel1.tres" id="8_17kq6"]
+[ext_resource type="Theme" uid="uid://deqsyowfnldyp" path="res://resources/themes/pinkTheme.tres" id="9_kbv7k"]
+[ext_resource type="Theme" uid="uid://defw6ujt7vp0k" path="res://resources/themes/labelBlank.tres" id="10_xapd7"]
+[ext_resource type="Theme" uid="uid://dt5i4g751q0rg" path="res://resources/themes/panelOrange.tres" id="11_i1pyg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5x5b"]
+bg_color = Color(0.0431373, 0.184314, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0sej"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvsei"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q04fp"]
+bg_color = Color(0.0431373, 0.109804, 0.211765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_353as"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 15.0
+
+[sub_resource type="Theme" id="Theme_u0dgb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wic1w"]
+bg_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro85a"]
+content_margin_bottom = 100.0
+bg_color = Color(0.622003, 0.17329, 0.113786, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh5gh"]
+content_margin_bottom = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myckk"]
+content_margin_bottom = 100.0
+bg_color = Color(1, 0.317647, 0.317647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_owi3r"]
+content_margin_bottom = 100.0
+bg_color = Color(0.031553, 0.353366, 0.317664, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8ram"]
+content_margin_bottom = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnd5r"]
+content_margin_bottom = 100.0
+bg_color = Color(0, 0.572549, 0.545098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gixk5"]
+content_margin_bottom = 100.0
+bg_color = Color(0.233235, 0.548305, 0.348098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v82iv"]
+content_margin_bottom = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xb3f"]
+content_margin_bottom = 100.0
+bg_color = Color(0, 1, 0.301961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agdyv"]
+content_margin_bottom = 100.0
+bg_color = Color(0.67539, 0.310207, 0.0993809, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aap6v"]
+content_margin_bottom = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djoeh"]
+content_margin_bottom = 100.0
+bg_color = Color(0.890196, 0.415686, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hro5"]
+content_margin_bottom = 100.0
+bg_color = Color(0.626474, 0.271097, 0.498522, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j54k4"]
+content_margin_bottom = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xx41g"]
+content_margin_bottom = 100.0
+bg_color = Color(0.992157, 0.219608, 0.631373, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emm26")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 122.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w5x5b")
+
+[node name="Logo" type="TextureRect" parent="Header"]
+layout_mode = 1
+offset_left = 37.0
+offset_top = 24.0
+offset_right = 130.0
+offset_bottom = 121.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_07ek5")
+
+[node name="Tap&Go" type="Label" parent="Header"]
+layout_mode = 2
+offset_left = 148.0
+offset_top = 37.0
+offset_right = 304.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_gohky")
+theme_override_font_sizes/font_size = 40
+text = "Tap&Go"
+
+[node name="Add" type="Button" parent="Header"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -215.0
+offset_top = 39.0
+offset_right = 91.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.0431373, 0.184314, 0.337255, 1)
+theme_override_fonts/font = ExtResource("3_vvqq3")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_l0sej")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wvsei")
+text = "Añadir producto"
+icon = ExtResource("4_eu6tk")
+
+[node name="Table" type="Button" parent="Header"]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 39.0
+offset_right = 1147.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_vvqq3")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_q04fp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_353as")
+text = "Seleccionar mesa"
+icon = ExtResource("5_21em6")
+
+[node name="TPV" type="Label" parent="Header"]
+layout_mode = 0
+offset_left = 1314.0
+offset_top = 37.0
+offset_right = 1399.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_gohky")
+theme_override_font_sizes/font_size = 40
+text = "TPV"
+
+[node name="HSplitContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 160.0
+offset_right = 1408.0
+offset_bottom = 1001.0
+theme = SubResource("Theme_u0dgb")
+theme_override_constants/separation = 535
+
+[node name="Calculator" parent="HSplitContainer" instance=ExtResource("6_t16vj")]
+layout_mode = 2
+
+[node name="Menu" type="HBoxContainer" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="HSplitContainer/Menu"]
+custom_minimum_size = Vector2(188, 841)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wic1w")
+
+[node name="Sections" type="VBoxContainer" parent="HSplitContainer/Menu/Panel"]
+layout_mode = 2
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 165.0
+offset_bottom = 786.0
+theme_override_constants/separation = 13
+
+[node name="Margin_Starters" type="MarginContainer" parent="HSplitContainer/Menu/Panel/Sections"]
+custom_minimum_size = Vector2(142, 150)
+layout_mode = 2
+
+[node name="Starters" type="Button" parent="HSplitContainer/Menu/Panel/Sections/Margin_Starters"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c8co6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_ro85a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dh5gh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_myckk")
+text = "Entrantes"
+
+[node name="Margin_Fish" type="MarginContainer" parent="HSplitContainer/Menu/Panel/Sections"]
+custom_minimum_size = Vector2(142, 150)
+layout_mode = 2
+
+[node name="Fish" type="Button" parent="HSplitContainer/Menu/Panel/Sections/Margin_Fish"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c8co6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_owi3r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f8ram")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bnd5r")
+text = "Pescados"
+
+[node name="Margin_Meat" type="MarginContainer" parent="HSplitContainer/Menu/Panel/Sections"]
+custom_minimum_size = Vector2(142, 150)
+layout_mode = 2
+
+[node name="Meat" type="Button" parent="HSplitContainer/Menu/Panel/Sections/Margin_Meat"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c8co6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_gixk5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v82iv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xb3f")
+text = "Carnes"
+
+[node name="Margin_Desserts" type="MarginContainer" parent="HSplitContainer/Menu/Panel/Sections"]
+custom_minimum_size = Vector2(142, 150)
+layout_mode = 2
+
+[node name="Desserts" type="Button" parent="HSplitContainer/Menu/Panel/Sections/Margin_Desserts"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c8co6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_agdyv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_aap6v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_djoeh")
+text = "Postres"
+
+[node name="Margin_Drink" type="MarginContainer" parent="HSplitContainer/Menu/Panel/Sections"]
+custom_minimum_size = Vector2(142, 150)
+layout_mode = 2
+
+[node name="Drinks" type="Button" parent="HSplitContainer/Menu/Panel/Sections/Margin_Drink"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c8co6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_8hro5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j54k4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xx41g")
+text = "Bebidas"
+
+[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer/Menu"]
+layout_mode = 2
+theme = ExtResource("8_17kq6")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Menu/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Drinks" type="GridContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_kbv7k")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 50
+
+[node name="Coca-Cola" type="Label" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("10_xapd7")
+text = "Coca-Cola"
+
+[node name="PanelContainer2" type="PanelContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_kbv7k")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 50
+
+[node name="Kas_Naranja" type="Label" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer2/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("10_xapd7")
+text = "Kas Naranja"
+
+[node name="PanelContainer3" type="PanelContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks"]
+layout_mode = 2
+theme = ExtResource("9_kbv7k")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer3"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 50
+
+[node name="Nestea" type="Label" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer3/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("10_xapd7")
+text = "Nestea"
+
+[node name="PanelContainer4" type="PanelContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks"]
+layout_mode = 2
+theme = ExtResource("9_kbv7k")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer4"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 50
+
+[node name="Agua_Font_natura" type="Label" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer4/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("10_xapd7")
+text = "Agua Font natura"
+
+[node name="PanelContainer5" type="PanelContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks"]
+layout_mode = 2
+theme = ExtResource("9_kbv7k")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer5"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 50
+
+[node name="Cerveza_San_Miguel" type="Label" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/Drinks/PanelContainer5/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("10_xapd7")
+text = "Cerveza San Miguel"
+
+[node name="GridContainer2" type="GridContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/GridContainer2"]
+layout_mode = 2
+theme = ExtResource("11_i1pyg")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/GridContainer2/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/Menu/PanelContainer/MarginContainer/GridContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
